@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+	<!---------------------------------------------------->	
+	<header>
+		<!--Use Flexbox to create the navigation bar-->
+		<div class="flexbox-container">
+			<div class="box-1">
+				<img src="MEDIA/global.png" alt="Logo"/>		
+			</div>	
+				
+			<div class="box-2">
+				<p class="tagline">ITWD6.408</p>
+			</div>
+			
+			<div class="box-3">
+				<div class="horizontal-nav">
+					<ul>
+						<li class="active"><a href="#">HOME</a></li>
+						<li><a href="forms.html">FORMS</a></li>
+						<li><a href="XML & RSS.html">XML/JSON</a></li>
+						<li><a href="Javascript.html">JAVASCRIPT</a></li>
+						<li><a href="Research.html">RESEARCH</a></li>	
+					</ul>
+				</div>			
+			</div>			
+			<div class="box-4">
+				<p onclick="openNav()">≡</p>
+			</div>				
+		</div>	
+
+		<!--Curtain menu: collapse this menu as default when loading the page-->
+		<nav id="curtain-nav">
+			<!--Add a close button (X) hyperlink on the top left corner-->
+			<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="forms.html">FORMS</a></li>
+					<li><a href="XML & RSS.html">XML/JSON</a></li>
+					<li><a href="Javascript.html">JAVASCRIPT</a></li>
+					<li><a href="my-research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+		</nav>
+	</header>
+	
+	<!---------------------------------------------------->	
+	<!--Main content section-->
+	<main>
+		
+		<section class="showcase"> 
+			<div class="bg-image"></div>
+			
+			<div class="background-text">
+				<h2 class="Line-1"><u>Advanced Network and Web Development</u></h2>
+				<h1 class="Line-2">I am Joseph Hungahunga</h1>
+				<p class="Line-3">And I'm a web developer</p>
+			</div>
+		</section>
+		
+		<section class="bio"> 		
+			<h1 class="bio-title">Bio</h1>
+			
+			<p class="bio-text"><img src="MEDIA/avatar.png">My name is Joseph Montell Hungahunga. I am 20 years old and I have been learning at EIT for 4 years. I am well interested in video games, computers and pretty much technology in general. My hobbies is of course video games and music as well. I am currently taking this course as a web developer as it will help me gain expereience and knowledge for a future career. Hopefully at the end of this course I will have learned enough knowledge to produce a functional website for a client or organization.</p>		
+		</section>
+		
+		<section class="webtechno">
+			<h1 class="web-title">My top 5 web technologies</h1>
+		<!--adds a link to a website-->
+			<p class="web-text"><a href="https:github.com">Github:</a> Github is an onlline provider where you can create and store htmls into it. I usually use this if I want to backup any websites that I am currently developing.</p>
+			<p class="web-text"><a href="https://www.google.com/drive/"> Google Drive:</a> Google Drive allows users to store files in the cloud. I also use this to store website files as well</p>
+			<p class="web-text"><a href="https://app.diagrams.net/">Draw.io:</a> Draw.io is an online diagram software used for creating wireframes. I use this to create wireframes of my websites. This is useful for planning a website</p>
+			<p class="web-text"><a href="https://notepad-plus-plus.org/">Notepad ++:</a> Notepad ++ is a source code editer used for creating websites. There are other source code editers but I have used Notepad alot for coding so im more used to using this editer for creating websites.</p>
+			<p class="web-text"><a href="https://www.python.org/">Python</a>Python is a programming language that can also be used for creating websites. I had some experience with this web tech.</p>
+		</section>
+		
+		<section class="competences">
+			<h1 class="com-title">My Web Development Competences</h1>
+		<!--creates 3 flipboxes within the website-->	
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<img src="MEDIA/html5.png">
+						<h2 class="title">Mark up<br>(HTML5)</h2>
+					</div>
+					<div class="flip-box-back">
+						<p>HTML 5 is the standard markup language used for developing web pages. I had alot of experiences creating websites by using this therefore I believe I have more competences with this.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<img src="MEDIA/css3.png">
+						<h2 class="title">Styling<br>(CSS3)</h2>
+					</div>
+					<div class="flip-box-back">
+						<p>CSS is another language that is used for describing how HTML elements should be displayed. Pretty much like this is used for decorating your website. I have some experience with this but it wasn't easy to use and sometimes I had trouble understanding which element is needed to improve my website. Therefore I have less competence with css but I am still decent at using it.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<img src="MEDIA/javascript.png">
+						<h2 class="title">Interactivity<br>(JavaScript)</h2>
+					</div>
+					<div class="flip-box-back">
+						<p>JavaScript is a scripting language used for adding interactivities into your website. I only had little experience with this language. I know the basics of it but there is still more that I need to learn for it. For now I have low competences with this.</p>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		
+		<section class="statement">
+			<h1 class="statement-title">Statement of Authenticity</h1>
+			<p class="statement-text">"This is an original assessment and is entirely my own work. It contains no material previously published or written by another person or myself except where due acknowledgement is made in the text. No material which to a substantial extent, has been submitted for any other academic course, is included without acknowledgement.”</p> 
+		</section>
+		
+	</main>
+	
+	<!---------------------------------------------------->	
+	<!--Footer section-->
+	<footer>
+		<div> @Created by: Joseph Montell Hungahunga <br />
+			Contact me at: <a href="mailto:HUNGAJ7@student.eit.ac.nz">HUNGAJ7@student.eit.ac.nz</a>
+		</div>
+	</footer>
+	
+	<!--Embed the js file at the bottom of the html file-->
+	<script type="text/javascript" src="JS/javascript.js"></script>
+
+</body>
+</html>
+

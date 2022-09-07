@@ -1,0 +1,752 @@
+/*-------------------------------------------------*/
+/* MOBILE FIRST APPROACH
+   All the below CSS styles are valid for Mobile (small) devices
+   Link: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+  
+   CSS Relative Unit
+   Link: https://www.w3schools.com/cssref/css_units.asp
+         https://css-tricks.com/css-font-size/
+         https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f4f4f4;	
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;/*Set the baseline font size for the whole website*/
+}
+
+/*Footer Area*/
+footer {
+	height: 10vh;
+	background-color: Cyan;
+	text-align: center;
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*Main area*/
+main {
+	min-height: 85vh;
+	background-color: gray;
+}
+
+
+/*Header Area*/
+/*---------------------------------*/
+/*CSS flexbox: 1D Card Layout
+  Link 1: https://codelikethis.com/lessons/responsive-layout/flexbox-layout 
+  Link 2: https://medium.com/@merveyuksek/webpage-layout-examples-with-flexbox-88287f010a08
+*/
+.flexbox-container {
+	/*flexbox container*/
+	display: flex;
+	flex-direction: row;/*display on a row => horizontally*/  
+	background-color: cyan;
+	min-height: 5vh;
+}
+
+.box-1 {
+	flex: 0; /*wrap the content*/
+}	
+
+.box-2 {
+	flex: 1;
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	font-size: 1.5em;
+	justify-content: left;
+	align-items: center;
+}
+
+.box-3 {
+    flex: 4; /*horizontal nav on desktop*/
+	/*Centering the content both vertical and horizontal*/
+	display: flex;
+	justify-content: center;
+	align-items: center;		
+}
+
+.box-4 {
+    flex: 1;/*Curtain menu*/
+	font-size: 4.0em;
+	color: blue;
+	cursor: pointer;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+/*horizontal nav*/
+.horizontal-nav {
+	display: none; /*Hide on mobile devices*/
+}
+   
+/*Curtain menu*/
+nav {
+	padding: 10px 10px 10px 10px;/*10px 10px 10px 10px*/
+	overflow: visible;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+nav ul li {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	display: block;
+	color: lime;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
+
+nav ul li ul li {
+	background: #555; 
+	display: block; 
+	font-size: 1em;
+}
+
+nav ul li ul li a {
+	display: block; 
+	text-align: left;
+
+}
+
+nav ul li.dropdown:hover ul {
+	display: block;
+}
+
+#curtain-nav {
+	height: 70%;/*100%*/
+	width: 0;/*Hide it as default when loading page*/
+	padding: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0; 
+	right: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;	
+}
+
+.curtain-nav-content {
+	/*For curtain menu*/
+	position: relative;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;	
+	overflow: visible;
+}
+
+.nav-close-button {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 2.0em;
+	color: white;
+	text-decoration: none;
+}
+
+main {
+		min-height: 75vh;
+		background-color: black;
+		
+		/*use CSS grid*/
+		display: grid;
+		grid-template-areas: "area-1"
+							 "area-2"
+							 "area-3"
+							 "area-4"
+							 "area-5";
+}
+
+.showcase {
+	grid-area: area-1;
+	height: 30vh;
+}
+
+.bg-image {
+  
+  background-image: url("../MEDIA/Matrix.jpg");
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(0px);
+  
+  /* Full height */
+  width: 100%;
+  height: 100%;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.background-text {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+}
+
+.background-text, line-1{
+	font-size: 40px;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: lime;
+}
+
+.background-text, line-2{
+	font-size: 30px;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: lime;
+}
+.background-text p, line-3{
+	font-size: 20px;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: lime;
+}
+
+.bio {
+	grid-area: area-2;
+	min-height: 15vh;
+	background-color: yellow;
+	display: flex;
+	flex-direction: column;
+}
+
+.bio-title {
+	color: Blue;
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: red;
+}
+
+.bio-text img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.bio-text {
+  text-align: left;
+  color: purple;
+  padding: 5px;
+}
+
+
+.webtechno {
+	grid-area: area-3;
+	min-height: 15vh;
+	background-color: green;
+}
+
+.web-title {
+	color: Blue;
+	font-weight: bold;
+    text-align: center;
+	padding: 5px;
+	font-size: 25px;
+	-webkit-text-stroke-width: 0.5px;
+	-webkit-text-stroke-color: cyan;
+}
+
+.web-text {
+  text-align: left;
+  color: lime;
+  padding: 5px;
+}
+
+.web-text a {
+  text-align: left;
+  color: Cyan;
+  padding: 5px;
+}
+
+.competences {
+	grid-area: area-4;
+	min-height: 15vh;
+	background-color: #DAF7A6;
+}
+
+.com-title {
+	color: Blue;
+	font-weight: bold;
+    text-align: center;
+	padding: 5px;
+	font-size: 25px;
+}
+
+.flip-box {
+	background-color: transparent;
+	width: 300px;
+	height: 180px;
+	border: 5px solid purple;
+	perspective: 1000px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+}
+
+.flip-box-front {
+  background-color: lime;
+  color: black;
+}
+
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+
+.flip-box-back p {
+	color: white;
+	font-size: 15px;
+}
+
+.flip-box-front img {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	border-radius: 30%;
+	border: 4px solid blue;
+	vertical-align: middle;
+	margin: 30px 0px;
+}
+
+.title {
+	color: Blue;
+	font-weight: bold;
+    text-align: left;
+	padding: 20px;
+	vertical-align: middle;
+	font-size: 30px;
+	display: block;
+	margin: 10px 0px;
+}
+
+.flip-box-back {
+  background-color: blue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.statement {
+	grid-area: area-5;
+	min-height: 15vh;
+	background-color: pink;
+	font-family: verdana;
+}
+
+.statement-title {
+	color: Blue;
+	font-weight: bold;
+    text-align: center;
+	padding: 5px;
+	font-size: 25px;
+}
+
+.statement-text {
+  text-align: left;
+  color: red;
+  padding: 5px;
+}
+
+.Line-1 {
+	line-height: 1.2;
+	font-size: 20px;
+}
+
+.Line-2 {
+	line-height: 1.5;
+	font-size: 25px;
+}
+
+.Line-3 {
+	line-height: 1.2;
+	font-size: 15px;
+}
+
+/*Set hover effect for items in the menu*/
+.active {
+	background-color: #FF9633;
+}
+
+li:hover:not(.active) {
+	background-color: green;
+}
+
+.font-title h1 {
+	font-family: verdana;
+}
+
+/*Research css code*/
+.Main-Research {
+	background-color: white;
+}
+
+.flip-box-Research {
+	background-color: transparent;
+	width: 300px;
+	height: 250px;
+	border: 5px solid orange;
+	perspective: 1000px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flip-box-inner-Research {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box-Research:hover .flip-box-inner-Research {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front-Research, .flip-box-back-Research {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+}
+
+.flip-box-front-Research {
+  background-color: yellow;
+  color: black;
+}
+
+.flip-box-back-Research {
+  transform: rotateY(180deg);
+}
+
+.flip-box-back-Research p {
+	color: white;
+	font-size: 10px;
+	font-family: verdana;
+	line-height: 1.2;
+}
+
+.flip-box-back-Research-lines p {
+	line-height: 1.2;
+}
+
+.flip-box-front-Research img {
+	width: 200px;
+	height: 110px;
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	margin: 50px 35px;
+}
+
+.title-Research {
+	color: Blue;
+	font-weight: bold;
+    text-align: center;
+	padding: 0px;
+	vertical-align: middle;
+	font-size: 20px;
+	display: block;
+	margin: 0px 20px;
+}
+
+.flip-box-back-Research {
+  background-color: blue;
+  color: white;
+  transform: rotateY(180deg);
+  font-family: verdana;
+}
+
+.reference {
+	grid-area: area-5;
+	min-height: 15vh;
+	background-color: pink;
+	font-family: verdana;
+}
+
+.reference-title {
+	color: Blue;
+	font-weight: bold;
+    text-align: center;
+	padding: 5px;
+	font-size: 25px;
+}
+
+.reference-text {
+  text-align: left;
+  color: black;
+  padding: 5px;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer; 
+  margin: 0px 150px
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  max-width: 550px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  line-height: 1.6;
+  bottom: 50px;
+  margin: -10px;
+}
+
+.dropdown-content a {
+  color: Blue;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+/*-------------------------------------------------*/
+/*RESPONSIVE CSS*/
+/*THUMB RULE: Mobile First
+  Use min-width to detect device screen size.
+  min-width: 768px means that "when viewport is 768px or larger (Tablet or PC), set these styles; 
+             otherwise (Mobile) set above styles"  
+*/
+@media screen and (min-width: 768px) {
+	
+/*Make Horizontal nav visible*/
+.horizontal-nav {
+	display: block;
+   	background-color: #DAF7A6; 
+	padding: 10px 10px 10px 10px;
+}
+   
+.horizontal-nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.horizontal-nav ul li {
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.0em;
+}
+
+.horizontal-nav ul li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
+
+.horizontal-nav ul li:hover:not(.active) {
+	background-color: green;
+}
+
+/*change layout for big screen*/
+main {
+	/*use CSS grid*/
+	display: grid;
+	grid-template-areas: "area-1 area-1"
+						 "area-2 area-3"
+						 "area-4 area-4"
+						 "area-5 area-5";
+	grid-template-columns: 1fr 1fr;
+}
+
+.background-text {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	z-index: 2;
+	width: 60%;
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.Line-1 {
+	line-height: 1.0;
+	font-size: 40px;
+}
+
+.Line-2 {
+	line-height: 1.0;
+	font-size: 30px;
+}
+
+.Line-3 {
+	line-height: 1.2;
+	font-size: 35px;
+}
+
+.bio-text img {
+	width: 150px;
+	height: 150px;
+	float: left;
+}
+.bio-title {
+	font-size: 35px;
+}
+	
+.com-title {
+	font-size: 35px;
+}
+	
+.flip-box {
+	width: 400px;
+	height: 250px;
+	display: inline-block;
+	margin: 10px 50px;
+}
+
+.flip-box-front img {
+	width: 100px;
+	height: 100px;
+	margin: 100px 130px;
+}
+
+.title {
+	text-align: center;
+	padding: 20px;
+	vertical-align: middle;
+	font-size: 30px;
+	display: block;
+	margin: 0px 0px;
+}
+
+.flip-box-back p {
+	font-size: 20px;
+}
+
+.flip-box-Research {
+	width: 450px;
+	height: 350px;
+	display: inline-block;
+	margin: 30px 250px;
+	}
+
+.flip-box-front-Research img {
+	width: 300px;
+	height: 150px;
+	margin: 80px 60px;
+}
+
+.title-Research {
+	text-align: center;
+	padding: 20px;
+	vertical-align: middle;
+	font-size: 25px;
+	display: block;
+	margin: 0px 0px;
+}
+
+.flip-box-back-Research p {
+	font-size: 14px;
+}
+
+.dropdown-content {
+	min-width: 500px;
+}
+
+.dropbtn {
+	margin: 0px 900px;
+}
+
+.dropdown-content {
+	margin: 30px 692px;
+}
+
+.reference-statement{
+	font-family: verdana;
+	font-size: 20px;
+	text-align: center;
+}
+}
+

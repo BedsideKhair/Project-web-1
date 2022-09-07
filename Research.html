@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+	<!---------------------------------------------------->	
+	<header>
+		<!--Use Flexbox to create the navigation bar-->
+		<div class="flexbox-container">
+			<div class="box-1">
+				<img src="MEDIA/global.png" alt="Logo"/>		
+			</div>	
+				
+			<div class="box-2">
+				<p class="tagline">ITWD6.408</p>
+			</div>
+			
+			<div class="box-3">
+				<div class="horizontal-nav">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="Forms.html">FORMS</a></li>
+						<li><a href="XML & RSS.html">XML/JSON</a></li>
+						<li><a href="Javascript.html">JAVASCRIPT</a></li>
+						<li class="active"><a href="#">RESEARCH</a></li>	
+					</ul>
+				</div>			
+			</div>			
+			<div class="box-4">
+				<p onclick="openNav()">≡</p>
+			</div>				
+		</div>	
+
+		<!--Curtain menu: collapse this menu as default when loading the page-->
+		<nav id="curtain-nav">
+			<!--Add a close button (X) hyperlink on the top left corner-->
+			<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="Forms.html">FORMS</a></li>
+					<li><a href="XML & RSS.html">XML/JSON</a></li>
+					<li><a href="Javascript.html">JAVASCRIPT</a></li>
+					<li class="active"><a href="#">RESEARCH</a></li>	
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="font-title">
+		<h1 class="bg-success text-center p-3 text-info"><b>WEB DEVELOPENT RESEARCH</b></h1>
+	</div>
+	
+<main>
+		<div class="flip-box-Research">
+			<div class="flip-box-inner-Research">
+				<div class="flip-box-front-Research">
+					<img src="MEDIA/copyright.jpg">
+					<h2 class="title-Research">Copyright Creative Common (CC) Licenses, Fair Use</h2>
+				</div>
+				<div class="flip-box-back-Research">
+					<p>A copyright is an Act of the Law that gives the owner of a copyright the exclusive right to do and authorize others to do certain things in regard to a copyrighted work, including: make copies, distribute the work, display or perform the work publicly, and create derivative works.</p>
+					<div class="flip-box-back-Research-lines">
+						<p>There are four types of CC licenses:<br>
+						   <b>1.</b> BY - attribution required.<br>
+						   <b>2.</b> NC - no commercial use.<br>
+						   <b>3.</b> ND - no derivative works.<br>
+						   <b>4.</b> SA - Share Alike.</p>
+					</div>
+				</div>				
+			</div>
+		</div>
+			
+		<div class="flip-box-Research">
+			<div class="flip-box-inner-Research">
+				<div class="flip-box-front-Research">
+					<img src="MEDIA/privacy.jpg">
+					<h2 class="title-Research">Privacy Policy</h2>
+				</div>
+					<div class="flip-box-back-Research">
+						<p>A privacy policy is a document that explains how an organization handles any customer, client or employee information gathered in its operations.</p>
+						<p>If I were to have a privacy policy for my website, it would be that all user's private information will not be shared within my website in order to respect their privacies.</p>
+					</div>
+				</div>
+			</div>
+	
+		<div class="flip-box-Research">
+			<div class="flip-box-inner-Research">
+				<div class="flip-box-front-Research">
+					<img src="MEDIA/seo.jpg">
+					<h2 class="title-Research">5 ways to improve your website</h2>
+				</div>
+				<div class="flip-box-back-Research">
+					<p><b>There are 5 ways to improve your website listed down below.</b></p>
+					<p><b>1.</b> Use images wisely. Don't spam them all over your website<br>
+					   <b>2.</b> Keep all of your webpages consistant to avoid confusion<br>
+					   <b>3.</b> Use the right color theme that matches your website<br>
+					   <b>4.</b> Get an idea of what is the purpose of your website<br>
+					   <b>5.</b> Think about which group of users will find your website useful</p>
+				</div>
+			</div>
+		</div>
+			
+		<div class="flip-box-Research">
+			<div class="flip-box-inner-Research">
+				<div class="flip-box-front-Research">
+					<img src="MEDIA/web-hosting.jpg">
+					<h2 class="title-Research">choosing the right web hosting provider</h2>
+				</div>
+				<div class="flip-box-back-Research">
+					<p><b>There are 3 factors when selecting the right hosting provider for your website</b></p>
+					<p><b>1.</b> You should determined what kind of host provider you need for your website. Each will always has its advantages and disadvantages.</p>
+					<p><b>2.</b> Make sure the host provider can also provide security for your website to avoid viruses and hackers.</p>
+					<p><b>3.</b> Check to see that the host provider will be able to support your website.</p>
+				</div>
+			</div>
+		</div>
+			
+		<div class="flip-box-Research">
+			<div class="flip-box-inner-Research">
+				<div class="flip-box-front-Research">
+					<img src="MEDIA/web-performance.jpg">
+					<h2 class="title-Research">Performance & Maintenance</h2>
+				</div>
+				<div class="flip-box-back-Research">
+					<p><b>5 ways to reduce page loading time</b><br>
+					   <b>1.</b> Evaluate your plugins<br>
+					   <b>2.</b> Enable HTTP keep-alive response headers<br>
+					   <b>3.</b> Compress your content<br>
+					   <b>4.</b> Combine images into CSS sprites<br>
+					   <b>5.</b> Cache your webpages<br>
+					</p>
+					
+					<p><b>5 tasks for maintaining a website</b><br>
+					   <b>1.</b> Check all pages can load without errors<br>
+					   <b>2.</b> Make updates to website regularly<br>
+					   <b>3.</b> Check all forms are running properly<br>
+					   <b>4.</b> Remove any spam comments from pages and posts<br>
+					   <b>5.</b> Make sure your security is up to date regularly<br>
+					</p>
+				</div>
+			</div>
+		</div>
+			
+		<div class="flip-box-Research">
+			<div class="flip-box-inner-Research">
+				<div class="flip-box-front-Research">
+					<img src="MEDIA/web-security.jpg">
+					<h2 class="title-Research">Web Security</h2>
+				</div>
+				<div class="flip-box-back-Research">
+					<p>There is a chance that your website can suffer a cyber attack. There are 5 common ones and ways to prevent them.<br>
+					   <b>1.</b> Malware: Deadly viruses that disguises itself as a normal software. You need to use an antivirus and firewalls to prevent these attacks.<br>
+					   <b>2.</b> SQL Injection: Occurs when a hacker gains access to the database but can be prevented by using an intrustion detection system<br>
+					   <b>3.</b> Password Attack: Pretty much where a user's password is exposed to a hacker. This can be prevented by updating your password regularly and don't leave any password hints in the open.<br>
+					   <b>4.</b> Phishing Attack: Occurs when a hacker pretends to be a trusted contact and sends fake mails to it's victim. This can be prevented by making use of an anti-phishing toolbar.<br>
+					   <b>5.</b> Insider Threat: Another deadly attack that can cause massive damage to organizations. However this can also be prevented by having a good security awareness.</p>
+				</div>
+			</div>
+		</div>
+</main>
+
+		<section class="reference">
+			<h1 class="reference-title">APA References</h1>
+			<p class="reference-statement">"This section notes all reference sources used for the production of this webpage”</p> 
+			
+			<div class="dropdown">
+			  <button class="dropbtn">View Sources</button>
+			  <div class="dropdown-content">
+			  <p class="reference-text"><b>Copyright Common Creative:</b><a href="https://fairuse.stanford.edu/2002/03/11/basic-copyright-principles/">https://fairuse.stanford.edu/2002/03/11/basic-copyright-principles/</a> Accessed on 1/09/2022</p>
+			  <p class="reference-text"><b>Privacy Policy</b><a href="https://www.techtarget.com/whatis/definition/privacy-policy#:~:text=A%20privacy%20policy%20is%20a,policies%20available%20to%20site%20visitors.">https://www.techtarget.com/whatis/definition/<br>privacy-policy#:~:text=A%20privacy%20policy%<br>20is%20a,policies%20available%20to%20site%<br>20visitors.</a> Accessed on 1/09/2022</p>
+			  <p class="reference-text"><b>Improving your website</b><a href="https://www.seoannarbor.com/learnmore/look-and-feel-website-design-ann-arbor">https://www.seoannarbor.com/learnmore/look-and-feel-website-design-ann-arbor</a> Accessed on 2/09/2022</p>
+			  <p class="reference-text"><b>Choosing the right web hosting provider</b><a href="https://digital.com/best-web-hosting/how-to-choose-a-web-hosting-provider/">https://digital.com/best-web-hosting/how-to-choose-a-web-hosting-provider/</a> Accessed on 2/09/2022</p>
+			  <p class="reference-text"><b>Performance & Maintenance</b><a href="https://www.lifehack.org/406111/7-easy-steps-to-maintain-your-website-and-increase-traffic">https://www.lifehack.org/406111/7-easy-steps-to-maintain-your-website-and-increase-traffic</a> Accessed on 2/09/2022</p>
+			  <p class="reference-text"><b>Web Security</b><a href="https://www.simplilearn.com/tutorials/cyber-security-tutorial/types-of-cyber-attacks">https://www.simplilearn.com/tutorials/cyber-security-tutorial/types-of-cyber-attacks</a> Accessed on 2/09/2022</p>
+			  </div>
+			</div>
+		</section>
+		
+	<!---------------------------------------------------->	
+	<!--Footer section-->
+	<footer>
+		<div> @Created by: Joseph Montell Hungahunga <br />
+			Contact me at: <a href="mailto:HUNGAJ7@student.eit.ac.nz">HUNGAJ7@student.eit.ac.nz</a>
+		</div>
+	</footer>
+	
+	<!--Embed the js file at the bottom of the html file-->
+	<script type="text/javascript" src="JS/javascript.js">
+	</script>
+
+</body>
+</html>
+
